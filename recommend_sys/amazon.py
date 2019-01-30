@@ -14,9 +14,9 @@ class Amazon:
         self.amazonurl = "http://webservices.amazon.co.jp/onca/xml"
         self.proxy_host = None
         self.proxy_port = None
-        self.access_key = 'AKIAJA6CNINETEGUGA6Q'
-        self.secret_access_key = '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'
-        self.associate_tag = 'kekec204-22'
+        self.access_key = 'ACCESS_KEY'
+        self.secret_access_key = 'SECRET_ACCESS_KEY'
+        self.associate_tag = 'ASSOCIATE_TAG'
         self.version = "2009-10-01"
         self.url = None
 
