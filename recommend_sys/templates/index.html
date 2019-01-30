@@ -1,0 +1,40 @@
+<?xml version"1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>書籍レコメンド</title>
+    <link rel="stylesheet" href="/static/main.css" type="text/css" />
+  </head>
+  <body>
+    <div id="main">
+    <h1>書籍レコメンド</h1>
+    <div id="form-area">
+      <p>書き込みをどうぞ</p>
+      <form action="/post" method="post">
+        <table>
+          <tr>
+            <th>名前</th>
+          <td>
+            <input  type="text" size="20" name="name" />
+          </td>
+          </tr>
+          <tr>
+            <th>趣味・興味など</th>
+            <td>
+              <textarea rows="5" cols="40" name="comment"></textarea>
+            </td>
+          </tr>
+        </table>
+        <p><button type="submit">送信</button></p>
+      </form>
+     </div>
+    <div id="entries-area">
+      <h2>書籍のレコメンド結果</h2>
+        <div class="entry">
+          {% for greeting in greeting_list %}
+            <h3>TITLE：{{ greeting.title}} 著者： ({{ greeting.author}})</h3>
+            <p>あらすじ：{{ greeting.arasuji}}</p>
+          {% endfor %}
+        </div>
+    </div>
+  </body>
+</html>
